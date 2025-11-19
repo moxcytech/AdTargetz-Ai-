@@ -79,24 +79,7 @@ const GooglePlacesAutocomplete = ({ value, onChange, placeholder, types = ['(reg
             }
         });
         
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(
-                (position) => {
-                    const geolocation = {
-                        lat: position.coords.latitude,
-                        lng: position.coords.longitude,
-                    };
-                    const circle = new window.google.maps.Circle({
-                        center: geolocation,
-                        radius: position.coords.accuracy,
-                    });
-                    autocomplete.setBounds(circle.getBounds());
-                },
-                (error) => {
-                    console.warn(`Geolocation permission denied or failed: ${error.message}`);
-                }
-            );
-        }
+        // Geolocation removed to prevent browser prompts on load
 
         return () => {
             if (window.google?.maps) {

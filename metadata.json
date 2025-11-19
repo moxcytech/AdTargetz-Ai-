@@ -1,7 +1,5 @@
 {
   "name": "AdTargetz Ai",
   "description": "A landing page for AdTargetz Ai, an AI-powered customer acquisition platform for running marketing campaigns on various platforms.",
-  "requestFramePermissions": [
-    "geolocation"
-  ]
+  "requestFramePermissions": []
 }
